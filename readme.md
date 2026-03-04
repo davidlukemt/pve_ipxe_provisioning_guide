@@ -70,13 +70,13 @@ Modifed - Disk section:
 
 
 
-# Start http-server docker container and open the host firewall to allow this traffic
+### Start http-server docker container and open the host firewall to allow this traffic
 ```
 podman run -d --rm --name http-server -p 5000:5000 -v /opt/pxe:/html:ro,z ghcr.io/patrickdappollonio/docker-http-server:v2
 sudo ufw route allow in on enp1s0 out on podman0 to any port 5000 
 ```
 
-### Deploy/Reinstall LSH server with the following Custom iPXE script
+## Deploy/Reinstall bare metal server with the following Custom iPXE script
 ```
 #!ipxe
 dhcp
