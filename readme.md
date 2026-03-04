@@ -8,6 +8,8 @@ https://github.com/morph027/pve-iso-2-pxe
 
 https://github.com/natankeddem/autopve
 
+https://github.com/patrickdappollonio/http-server
+
 ## Guide
 
 ### Add Proxmox Repo and install Proxmox auto-install tools, podman, and pve-iso-2-pxe.sh dependencies
