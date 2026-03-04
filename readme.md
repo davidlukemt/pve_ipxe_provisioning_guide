@@ -50,7 +50,7 @@ podman run -d --rm --name autopve -p 8080:8080 -v /etc/localtime:/etc/localtime:
 sudo ufw route allow in on enp1s0 out on podman0 to any port 8080 
 ```
 
-### Access the autopve UI at http://<server_ip>:8080/ in a browser and set the default and/or host specific configuration for the answer file
+#### Access the autopve UI at http://<server_ip>:8080/ in a browser and set the default and/or host specific configuration for the answer file
 
 Defaults - Global section:
 
@@ -70,7 +70,7 @@ Modifed - Disk section:
 
 
 
-### Start http-server docker container and open the host firewall to allow this traffic
+### Start http-server docker container to serve install artifacts and open the host firewall to allow this traffic
 ```
 podman run -d --rm --name http-server -p 5000:5000 -v /opt/pxe:/html:ro,z ghcr.io/patrickdappollonio/docker-http-server:v2
 sudo ufw route allow in on enp1s0 out on podman0 to any port 5000 
