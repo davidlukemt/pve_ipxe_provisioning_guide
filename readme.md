@@ -8,6 +8,7 @@ https://github.com/morph027/pve-iso-2-pxe
 
 https://github.com/natankeddem/autopve
 
+## Guide
 
 ### Add Proxmox Repo and install Proxmox auto-install tools, podman, and pve-iso-2-pxe.sh dependencies
 ```
@@ -42,7 +43,7 @@ sudo cp -v proxmox-ve_9.1-1-auto-from-http.iso  /opt/pxe/pve/9.1-1/proxmox-ve_9.
 sudo cp -v ~/pve/pxeboot/* /opt/pxe/pve/9.1-1/
 ```
 
-## autopve project deployment with Docker
+### Note: autopve project deployment with Docker
 https://github.com/natankeddem/autopve?tab=readme-ov-file#using-docker
 
 ### Create working directories from autopve docker container then use podman to start this container and open the host firewall to allow this traffic
