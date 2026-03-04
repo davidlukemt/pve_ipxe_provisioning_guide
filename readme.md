@@ -24,7 +24,6 @@ wget https://enterprise.proxmox.com/iso/proxmox-ve_9.1-1.iso
 ### Run Proxmox Auto Install assistant tool to request install answer file from http
 ```
 proxmox-auto-install-assistant prepare-iso proxmox-ve_9.1-1.iso --output proxmox-ve_9.1-1-auto-from-http.iso --fetch-from http --url "http://<server_ip>:8080/answer"
-proxmox-auto-install-assistant prepare-iso proxmox-ve_9.1-1.iso --output proxmox-ve_9.1-1-auto-from-http.iso --fetch-from http --url "http://207.188.7.215:8080/answer"
 ```
 
 ### Run the pve-iso-2-pxe.sh script against the new ISO file with answers file injected to add contents of ISO to initfs file for booting via PXE
