@@ -46,7 +46,7 @@ sudo cp -v ~/pve/pxeboot/* /opt/pxe/pve/9.1-1/
 ### Note: autopve project deployment with Docker
 https://github.com/natankeddem/autopve?tab=readme-ov-file#using-docker
 
-### Create working directories from autopve docker container then use podman to start this container and open the host firewall to allow this traffic
+### Create working directories from autopve docker container then use podman run to start this container vs docker compose, then open the host firewall to allow this traffic
 ```
 mkdir -p ~/autopve/data ~/autopve/logs
 podman run -d --rm --name autopve -p 8080:8080 -v /etc/localtime:/etc/localtime:ro -v ~/autopve/data:/app/data -v ~/autopve/logs:/app/logs -e "PUID=1000" -e "PGID=1000" ghcr.io/natankeddem/autopve:latest
