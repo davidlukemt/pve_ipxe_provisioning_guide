@@ -6,7 +6,7 @@ https://github.com/morph027/pve-iso-2-pxe
 https://github.com/natankeddem/autopve
 
 
-### Add PVE Repo and install pve auto install tools, podman and pve-iso-2-pxe.sh dependencies
+### Add Proxmox Repo and install Proxmox auto-install tools, podman, and pve-iso-2-pxe.sh dependencies
 ```
 sudo wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg 
 echo "deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription" | sudo tee /etc/apt/sources.list.d/pve-install-repo.list
@@ -14,14 +14,14 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt aut
 sudo apt install -y cpio file zstd gzip genisoimage podman proxmox-auto-install-assistant
 ```
 
-### Create PVE working directory Download PVE ISO and pve-iso-2-pxe script
+### Create Proxmox working directory Download Proxmox ISO and pve-iso-2-pxe script
 ```
 mkdir ~/pve && cd ~/pve
 wget https://github.com/morph027/pve-iso-2-pxe/raw/refs/heads/master/pve-iso-2-pxe.sh
 wget https://enterprise.proxmox.com/iso/proxmox-ve_9.1-1.iso
 ```
 
-### Run PVE Auto Install assistant tool to request install answer file from http
+### Run Proxmox Auto Install assistant tool to request install answer file from http
 ```
 proxmox-auto-install-assistant prepare-iso proxmox-ve_9.1-1.iso --output proxmox-ve_9.1-1-auto-from-http.iso --fetch-from http --url "http://<server_ip>:8080/answer"
 proxmox-auto-install-assistant prepare-iso proxmox-ve_9.1-1.iso --output proxmox-ve_9.1-1-auto-from-http.iso --fetch-from http --url "http://207.188.7.215:8080/answer"
