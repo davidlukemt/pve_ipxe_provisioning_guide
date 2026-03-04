@@ -14,7 +14,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt aut
 sudo apt install -y cpio file zstd gzip genisoimage podman proxmox-auto-install-assistant
 ```
 
-### Create Proxmox working directory Download Proxmox ISO and pve-iso-2-pxe script
+### Create pve working directory Download Proxmox ISO and pve-iso-2-pxe script
 ```
 mkdir ~/pve && cd ~/pve
 wget https://github.com/morph027/pve-iso-2-pxe/raw/refs/heads/master/pve-iso-2-pxe.sh
