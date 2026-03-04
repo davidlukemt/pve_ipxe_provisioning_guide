@@ -1,3 +1,6 @@
+## Usage
+This is a basic guide for creating a iPXE install artifact server using a collection of Proxmox official and Community tools. By following this guide, an operator can use a Linux environment to create customized install artifacts for Proxmox VE with auto install configuration injection, and configure the servers necessary to publish these assets on the network. This is intended for use with a bare metal cloud Custom iPXE provisioning process that provides an option to feed a customer defined iPXE scripts to the provisioning process. 
+
 ### Sources
 https://pve.proxmox.com/wiki/Automated_Installation
 
